@@ -2,7 +2,7 @@
 //  LANEagleApp.swift
 //  LANEagle
 //
-//  Created by Θοδωρης Σκονδρας on 20/6/25.
+//  Created by Θοδωρης Σκονδρας on 3/7/25.
 //
 
 import SwiftUI

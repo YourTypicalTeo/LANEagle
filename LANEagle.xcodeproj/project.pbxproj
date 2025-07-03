@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		ABB5E4EE2E05B63C0003B070 /* LANEagle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LANEagle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB8B49A72E16FA540052AFCC /* LANEagle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LANEagle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		ABB5E4F02E05B63C0003B070 /* LANEagle */ = {
+		AB8B49A92E16FA540052AFCC /* LANEagle */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = LANEagle;
 			sourceTree = "<group>";
@@ -19,7 +19,7 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ABB5E4EB2E05B63C0003B070 /* Frameworks */ = {
+		AB8B49A42E16FA540052AFCC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ABB5E4E52E05B63C0003B070 = {
+		AB8B499E2E16FA540052AFCC = {
 			isa = PBXGroup;
 			children = (
-				ABB5E4F02E05B63C0003B070 /* LANEagle */,
-				ABB5E4EF2E05B63C0003B070 /* Products */,
+				AB8B49A92E16FA540052AFCC /* LANEagle */,
+				AB8B49A82E16FA540052AFCC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		ABB5E4EF2E05B63C0003B070 /* Products */ = {
+		AB8B49A82E16FA540052AFCC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ABB5E4EE2E05B63C0003B070 /* LANEagle.app */,
+				AB8B49A72E16FA540052AFCC /* LANEagle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ABB5E4ED2E05B63C0003B070 /* LANEagle */ = {
+		AB8B49A62E16FA540052AFCC /* LANEagle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ABB5E4F92E05B63E0003B070 /* Build configuration list for PBXNativeTarget "LANEagle" */;
+			buildConfigurationList = AB8B49B22E16FA570052AFCC /* Build configuration list for PBXNativeTarget "LANEagle" */;
 			buildPhases = (
-				ABB5E4EA2E05B63C0003B070 /* Sources */,
-				ABB5E4EB2E05B63C0003B070 /* Frameworks */,
-				ABB5E4EC2E05B63C0003B070 /* Resources */,
+				AB8B49A32E16FA540052AFCC /* Sources */,
+				AB8B49A42E16FA540052AFCC /* Frameworks */,
+				AB8B49A52E16FA540052AFCC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				ABB5E4F02E05B63C0003B070 /* LANEagle */,
+				AB8B49A92E16FA540052AFCC /* LANEagle */,
 			);
 			name = LANEagle;
 			packageProductDependencies = (
 			);
 			productName = LANEagle;
-			productReference = ABB5E4EE2E05B63C0003B070 /* LANEagle.app */;
+			productReference = AB8B49A72E16FA540052AFCC /* LANEagle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		ABB5E4E62E05B63C0003B070 /* Project object */ = {
+		AB8B499F2E16FA540052AFCC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					ABB5E4ED2E05B63C0003B070 = {
+					AB8B49A62E16FA540052AFCC = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
 			};
-			buildConfigurationList = ABB5E4E92E05B63C0003B070 /* Build configuration list for PBXProject "LANEagle" */;
+			buildConfigurationList = AB8B49A22E16FA540052AFCC /* Build configuration list for PBXProject "LANEagle" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = ABB5E4E52E05B63C0003B070;
+			mainGroup = AB8B499E2E16FA540052AFCC;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = ABB5E4EF2E05B63C0003B070 /* Products */;
+			productRefGroup = AB8B49A82E16FA540052AFCC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ABB5E4ED2E05B63C0003B070 /* LANEagle */,
+				AB8B49A62E16FA540052AFCC /* LANEagle */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		ABB5E4EC2E05B63C0003B070 /* Resources */ = {
+		AB8B49A52E16FA540052AFCC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ABB5E4EA2E05B63C0003B070 /* Sources */ = {
+		AB8B49A32E16FA540052AFCC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		ABB5E4F72E05B63E0003B070 /* Debug */ = {
+		AB8B49B02E16FA570052AFCC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -189,7 +189,7 @@
 			};
 			name = Debug;
 		};
-		ABB5E4F82E05B63E0003B070 /* Release */ = {
+		AB8B49B12E16FA570052AFCC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -246,7 +246,7 @@
 			};
 			name = Release;
 		};
-		ABB5E4FA2E05B63E0003B070 /* Debug */ = {
+		AB8B49B32E16FA570052AFCC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -274,7 +274,7 @@
 			};
 			name = Debug;
 		};
-		ABB5E4FB2E05B63E0003B070 /* Release */ = {
+		AB8B49B42E16FA570052AFCC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -305,25 +305,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ABB5E4E92E05B63C0003B070 /* Build configuration list for PBXProject "LANEagle" */ = {
+		AB8B49A22E16FA540052AFCC /* Build configuration list for PBXProject "LANEagle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ABB5E4F72E05B63E0003B070 /* Debug */,
-				ABB5E4F82E05B63E0003B070 /* Release */,
+				AB8B49B02E16FA570052AFCC /* Debug */,
+				AB8B49B12E16FA570052AFCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ABB5E4F92E05B63E0003B070 /* Build configuration list for PBXNativeTarget "LANEagle" */ = {
+		AB8B49B22E16FA570052AFCC /* Build configuration list for PBXNativeTarget "LANEagle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ABB5E4FA2E05B63E0003B070 /* Debug */,
-				ABB5E4FB2E05B63E0003B070 /* Release */,
+				AB8B49B32E16FA570052AFCC /* Debug */,
+				AB8B49B42E16FA570052AFCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = ABB5E4E62E05B63C0003B070 /* Project object */;
+	rootObject = AB8B499F2E16FA540052AFCC /* Project object */;
 }

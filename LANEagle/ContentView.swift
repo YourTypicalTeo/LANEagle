@@ -2,8 +2,8 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var bonjour = BonjourScanner()
-    @StateObject private var ping = PingScanner()
-    @State private var isScanning = false
+    @StateObject private var scanner = PingScanner()
+    @State private var scanning = false
 
     var body: some View {
         NavigationView {
@@ -11,45 +11,45 @@ struct ContentView: View {
                 if !bonjour.services.isEmpty {
                     Section("Bonjour Devices") {
                         ForEach(bonjour.services, id: \.self) { result in
-                            let endpoint = result.endpoint
-                            if case let .service(name, type, domain, _) = endpoint {
+                            if case let .service(name, type, domain, _) = result.endpoint {
                                 VStack(alignment: .leading) {
-                                    Text(name).font(.headline)
-                                    Text(type + "." + domain).font(.subheadline)
+                                    Text(name).bold()
+                                    Text("\(type).\(domain)")
                                 }
                             }
                         }
                     }
                 }
-                if !ping.reachableHosts.isEmpty {
+                if !scanner.reachableHosts.isEmpty {
                     Section("Reachable Hosts") {
-                        ForEach(ping.reachableHosts.sorted(), id: \.self) { ip in
+                        ForEach(scanner.reachableHosts.sorted(), id: \.self) { ip in
                             Text(ip)
                         }
                     }
                 }
             }
-            .navigationTitle("LAN Device Tracker")
+            .navigationTitle("LAN Eagle")
             .toolbar {
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    Button(isScanning ? "Stop" : "Start") {
-                        if isScanning {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(scanning ? "Stop" : "Start") {
+                        if scanning {
                             bonjour.stopBrowsing()
-                            ping.stopSweep()
+                            scanner.stopSweep()
                         } else {
-                            startScanning()
+                            startAll()
                         }
-                        isScanning.toggle()
+                        scanning.toggle()
                     }
                 }
             }
         }
     }
 
-    private func startScanning() {
-        guard let (ip, _) = NetworkHelper.localSubnet() else { return }
-        let prefix = ip.split(separator: ".").dropLast().joined(separator: ".")
+    func startAll() {
         bonjour.startBrowsing(type: "_http._tcp")
-        ping.startSweep(networkPrefix: String(prefix), port: 80)
+        if let (ip, _) = NetworkHelper.localSubnet() {
+            let prefix = ip.split(separator: ".").dropLast().joined(separator: ".")
+            scanner.startSweep(networkPrefix: prefix, port: 80)
+        }
     }
 }

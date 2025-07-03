@@ -4,7 +4,6 @@
 //
 //  Created by Θοδωρης Σκονδρας on 3/7/25.
 //
-
 import Foundation
 import Network
 
@@ -26,7 +25,6 @@ class BonjourScanner: ObservableObject {
 
     func stopBrowsing() {
         browser?.cancel()
-        browser = nil
         services.removeAll()
     }
 }
