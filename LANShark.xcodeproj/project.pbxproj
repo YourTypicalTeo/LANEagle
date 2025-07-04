@@ -7,45 +7,33 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		AB8B49A72E16FA540052AFCC /* LANEagle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LANEagle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB8AE772E1838CF00115200 /* LANShark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LANShark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		ABB8AE672E1836A800115200 /* Exceptions for "LANEagle" folder in "LANEagle" target */ = {
+		ABB8AE882E183AE100115200 /* Exceptions for "LANShark" folder in "LANShark" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				DeviceNameHelper.swift,
 				Info.plist,
 			);
-			target = AB8B49A62E16FA540052AFCC /* LANEagle */;
+			target = ABB8AE762E1838CF00115200 /* LANShark */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		ABB8AE692E1836FC00115200 /* Exceptions for "LANEagle" folder in "Copy Bundle Resources" phase from "LANEagle" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = AB8B49A52E16FA540052AFCC /* Resources */;
-			membershipExceptions = (
-				LANEagle.entitlements,
-				LANEagleDebug.entitlements,
-				LANEagleRelease.entitlements,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		AB8B49A92E16FA540052AFCC /* LANEagle */ = {
+		ABB8AE792E1838CF00115200 /* LANShark */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				ABB8AE672E1836A800115200 /* Exceptions for "LANEagle" folder in "LANEagle" target */,
-				ABB8AE692E1836FC00115200 /* Exceptions for "LANEagle" folder in "Copy Bundle Resources" phase from "LANEagle" target */,
+				ABB8AE882E183AE100115200 /* Exceptions for "LANShark" folder in "LANShark" target */,
 			);
-			path = LANEagle;
+			path = LANShark;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AB8B49A42E16FA540052AFCC /* Frameworks */ = {
+		ABB8AE742E1838CF00115200 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,18 +43,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AB8B499E2E16FA540052AFCC = {
+		ABB8AE6E2E1838CF00115200 = {
 			isa = PBXGroup;
 			children = (
-				AB8B49A92E16FA540052AFCC /* LANEagle */,
-				AB8B49A82E16FA540052AFCC /* Products */,
+				ABB8AE792E1838CF00115200 /* LANShark */,
+				ABB8AE782E1838CF00115200 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AB8B49A82E16FA540052AFCC /* Products */ = {
+		ABB8AE782E1838CF00115200 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AB8B49A72E16FA540052AFCC /* LANEagle.app */,
+				ABB8AE772E1838CF00115200 /* LANShark.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,64 +62,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AB8B49A62E16FA540052AFCC /* LANEagle */ = {
+		ABB8AE762E1838CF00115200 /* LANShark */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB8B49B22E16FA570052AFCC /* Build configuration list for PBXNativeTarget "LANEagle" */;
+			buildConfigurationList = ABB8AE822E1838D100115200 /* Build configuration list for PBXNativeTarget "LANShark" */;
 			buildPhases = (
-				AB8B49A32E16FA540052AFCC /* Sources */,
-				AB8B49A42E16FA540052AFCC /* Frameworks */,
-				AB8B49A52E16FA540052AFCC /* Resources */,
+				ABB8AE732E1838CF00115200 /* Sources */,
+				ABB8AE742E1838CF00115200 /* Frameworks */,
+				ABB8AE752E1838CF00115200 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				AB8B49A92E16FA540052AFCC /* LANEagle */,
+				ABB8AE792E1838CF00115200 /* LANShark */,
 			);
-			name = LANEagle;
+			name = LANShark;
 			packageProductDependencies = (
 			);
-			productName = LANEagle;
-			productReference = AB8B49A72E16FA540052AFCC /* LANEagle.app */;
+			productName = LANShark;
+			productReference = ABB8AE772E1838CF00115200 /* LANShark.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AB8B499F2E16FA540052AFCC /* Project object */ = {
+		ABB8AE6F2E1838CF00115200 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					AB8B49A62E16FA540052AFCC = {
+					ABB8AE762E1838CF00115200 = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
 			};
-			buildConfigurationList = AB8B49A22E16FA540052AFCC /* Build configuration list for PBXProject "LANEagle" */;
+			buildConfigurationList = ABB8AE722E1838CF00115200 /* Build configuration list for PBXProject "LANShark" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = AB8B499E2E16FA540052AFCC;
+			mainGroup = ABB8AE6E2E1838CF00115200;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = AB8B49A82E16FA540052AFCC /* Products */;
+			productRefGroup = ABB8AE782E1838CF00115200 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AB8B49A62E16FA540052AFCC /* LANEagle */,
+				ABB8AE762E1838CF00115200 /* LANShark */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AB8B49A52E16FA540052AFCC /* Resources */ = {
+		ABB8AE752E1838CF00115200 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -141,7 +129,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AB8B49A32E16FA540052AFCC /* Sources */ = {
+		ABB8AE732E1838CF00115200 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -151,7 +139,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		AB8B49B02E16FA570052AFCC /* Debug */ = {
+		ABB8AE802E1838D100115200 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,7 +203,7 @@
 			};
 			name = Debug;
 		};
-		AB8B49B12E16FA570052AFCC /* Release */ = {
+		ABB8AE812E1838D100115200 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -272,20 +260,18 @@
 			};
 			name = Release;
 		};
-		AB8B49B32E16FA570052AFCC /* Debug */ = {
+		ABB8AE832E1838D100115200 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = LANEagle/LANEagle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J2YB497BBM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LANEagle/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "This app requires network access to scan for Devices";
+				INFOPLIST_FILE = LANShark/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "This app requires Network access to scan for devices";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -296,8 +282,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "Theodoros-Skondras.LANEagle";
+				PRODUCT_BUNDLE_IDENTIFIER = "Theodoros-Skondras.LANShark";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -305,20 +290,18 @@
 			};
 			name = Debug;
 		};
-		AB8B49B42E16FA570052AFCC /* Release */ = {
+		ABB8AE842E1838D100115200 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = LANEagle/LANEagleRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J2YB497BBM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LANEagle/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "This app requires network access to scan for Devices";
+				INFOPLIST_FILE = LANShark/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "This app requires Network access to scan for devices";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -329,8 +312,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = "Theodoros-Skondras.LANEagle";
+				PRODUCT_BUNDLE_IDENTIFIER = "Theodoros-Skondras.LANShark";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -341,25 +323,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AB8B49A22E16FA540052AFCC /* Build configuration list for PBXProject "LANEagle" */ = {
+		ABB8AE722E1838CF00115200 /* Build configuration list for PBXProject "LANShark" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB8B49B02E16FA570052AFCC /* Debug */,
-				AB8B49B12E16FA570052AFCC /* Release */,
+				ABB8AE802E1838D100115200 /* Debug */,
+				ABB8AE812E1838D100115200 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB8B49B22E16FA570052AFCC /* Build configuration list for PBXNativeTarget "LANEagle" */ = {
+		ABB8AE822E1838D100115200 /* Build configuration list for PBXNativeTarget "LANShark" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB8B49B32E16FA570052AFCC /* Debug */,
-				AB8B49B42E16FA570052AFCC /* Release */,
+				ABB8AE832E1838D100115200 /* Debug */,
+				ABB8AE842E1838D100115200 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AB8B499F2E16FA540052AFCC /* Project object */;
+	rootObject = ABB8AE6F2E1838CF00115200 /* Project object */;
 }
