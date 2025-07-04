@@ -1,5 +1,3 @@
-# LANShark
-
 ![LANShark Logo](LANShark/Assets.xcassets/logo.png)
 
 > **LANShark** is a powerful and intuitive iOS application designed to effortlessly track and display all devices connected to your local network. Built with Swift, LANShark empowers users with clear insights into their home or office network environment.
