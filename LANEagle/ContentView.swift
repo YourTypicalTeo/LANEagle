@@ -1,55 +1,59 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var bonjour = BonjourScanner()
-    @StateObject private var scanner = PingScanner()
-    @State private var scanning = false
+    @EnvironmentObject var networkMonitor: NetworkMonitor
 
     var body: some View {
         NavigationView {
-            List {
-                if !bonjour.services.isEmpty {
-                    Section("Bonjour Devices") {
-                        ForEach(bonjour.services, id: \.self) { result in
-                            if case let .service(name, type, domain, _) = result.endpoint {
-                                VStack(alignment: .leading) {
-                                    Text(name).bold()
-                                    Text("\(type).\(domain)")
-                                }
-                            }
-                        }
-                    }
-                }
-                if !scanner.reachableHosts.isEmpty {
-                    Section("Reachable Hosts") {
-                        ForEach(scanner.reachableHosts.sorted(), id: \.self) { ip in
-                            Text(ip)
-                        }
-                    }
-                }
-            }
-            .navigationTitle("LAN Eagle")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(scanning ? "Stop" : "Start") {
-                        if scanning {
-                            bonjour.stopBrowsing()
-                            scanner.stopSweep()
-                        } else {
-                            startAll()
-                        }
-                        scanning.toggle()
-                    }
-                }
-            }
-        }
-    }
+            VStack(spacing: 24) {
+                Text("LAN Eagle")
+                    .font(.largeTitle).bold()
+                    .padding(.top)
 
-    func startAll() {
-        bonjour.startBrowsing(type: "_http._tcp")
-        if let (ip, _) = NetworkHelper.localSubnet() {
-            let prefix = ip.split(separator: ".").dropLast().joined(separator: ".")
-            scanner.startSweep(networkPrefix: prefix, port: 80)
+                HStack(spacing: 32) {
+                    Button(action: {
+                        networkMonitor.startScan()
+                    }) {
+                        Label("Start Scan", systemImage: "dot.radiowaves.left.and.right")
+                    }
+                    .disabled(networkMonitor.isScanning)
+
+                    Button(action: {
+                        networkMonitor.stopScan()
+                    }) {
+                        Label("Stop Scan", systemImage: "stop.circle")
+                    }
+                    .disabled(!networkMonitor.isScanning)
+                }
+                .font(.title2)
+                .buttonStyle(.borderedProminent)
+
+                if let error = networkMonitor.errorMessage {
+                    Text(error)
+                        .foregroundColor(.red)
+                        .padding(.horizontal)
+                }
+
+                if networkMonitor.permissionRequested && networkMonitor.devices.isEmpty && !networkMonitor.isScanning {
+                    Text("No devices found yet.\nMake sure local network permission is granted in Settings.")
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.secondary)
+                        .padding(.top)
+                }
+
+                List(networkMonitor.devices) { device in
+                    VStack(alignment: .leading) {
+                        Text(device.name)
+                            .font(.headline)
+                        Text("\(device.type) • \(device.ip)")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                .listStyle(.insetGrouped)
+            }
+            .padding()
+            .navigationTitle("Local Network Scan")
         }
     }
 }
