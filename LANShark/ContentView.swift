@@ -5,7 +5,8 @@ struct ContentView: View {
     @StateObject var scanner = LANScanner()
     @State private var showAlert = false
     @State private var scanButtonActive = false
-    
+    @Environment(\.colorScheme) var colorScheme
+
     // Typing animation states
     @State private var displayedSubtitle = ""
     private let fullSubtitle = "Sharks Don’t Miss a Thing. \n Neither Should Your Scanner."
@@ -13,33 +14,28 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            SharkTheme.background.ignoresSafeArea()
+            // Themed background for light/dark mode
+            SharkTheme.background(for: colorScheme).ignoresSafeArea()
 
             VStack(spacing: 0) {
                 // Header
                 VStack(spacing: 12) {
-                    Image("logo")
-                        .resizable()
-                        .frame(width: 95, height: 95)
-                        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                        .shadow(radius: 2)
                     Text("LANShark")
                         .font(.system(size: 37, weight: .bold, design: .rounded))
-                        .foregroundColor(.primary)
-                        .shadow(color: .white.opacity(0.5), radius: 2, y: 1)
-                    // Typing subtitle
+                        .foregroundColor(.blue)
+                    // Typing subtitle with white/black depending on mode
                     Text(displayedSubtitle)
                         .multilineTextAlignment(.center)
                         .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
                         .padding(.bottom, 8)
                         .onAppear {
                             startTypingAnimation()
                         }
                 }
                 .padding(.top, 24)
-                // ... rest of your code ...
-                // (No changes below here)
+
+                // Scan Button
                 ScanButton(
                     isActive: scanButtonActive,
                     progress: scanner.progress,
@@ -65,24 +61,26 @@ struct ContentView: View {
                 .padding(.bottom, 8)
                 .frame(height: 70)
 
+                // Scan progress/info
                 if scanner.isScanning {
                     Text("Scanning your network…")
                         .font(.footnote)
-                        .foregroundColor(.black)
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
                         .padding(.bottom, 3)
                 }
                 if !scanner.isScanning && scanner.scanDuration > 0 {
                     Text("Scan completed in \(String(format: "%.1f", scanner.scanDuration)) seconds")
                         .font(.footnote)
-                        .foregroundColor(.black)
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
                         .padding(.bottom, 2)
                 }
 
+                // Device List
                 VStack(alignment: .leading, spacing: 0) {
                     if !scanner.scannedDevices.isEmpty {
                         Text("Devices Found")
                             .font(.headline)
-                            .foregroundColor(SharkTheme.blue)
+                            .foregroundColor(SharkTheme.blue(for: colorScheme))
                             .padding(.leading, 12)
                             .padding(.top, 6)
                     }
@@ -92,12 +90,13 @@ struct ContentView: View {
                                 LANSharkDeviceCard(device: device)
                             }
                         }
+                        .padding(.horizontal, 12) // << Adds spacing from list edges!
                         .padding(.top, 2)
                         .padding(.bottom, 8)
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(.regularMaterial)
+                .background(.ultraThinMaterial)
                 .cornerRadius(22)
                 .padding(.top, 6)
                 .padding(.horizontal, 8)
@@ -108,7 +107,7 @@ struct ContentView: View {
             Button("OK", role: .cancel) {}
         }
     }
-    
+
     // MARK: - Typing Animation Logic
     func startTypingAnimation() {
         displayedSubtitle = ""
